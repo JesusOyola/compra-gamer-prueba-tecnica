@@ -1,1 +1,33 @@
-<p>dashboard works!</p>
+<section>
+  <app-navbar></app-navbar>
+
+  <div class="container">
+    <mat-card *ngFor="let product of listProducts" class="example-card">
+      <mat-card-header>
+        
+        <mat-card-title>{{product.nombre}}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <h3>
+          {{product.precio | currency:'ARS ': 'symbol' : '1.0-0'}}
+        </h3>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>AGREGAR AL CARRITO</button>
+        <div class="amount-container"><span>3</span></div>
+        <button
+          mat-icon-button
+          class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon"
+        >
+          <mat-icon class="shopping_cart">shopping_cart</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
