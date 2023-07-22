@@ -1,0 +1,28 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.img-user {
+  width: 40%;
+}
+
+.auth {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.field{
+    width: 80%;
+}
+.btn-auth{
+    height: 40px;
+    width: 40%;
+}

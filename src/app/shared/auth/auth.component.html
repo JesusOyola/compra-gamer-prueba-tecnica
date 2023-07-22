@@ -1,1 +1,64 @@
-<p>auth works!</p>
+<div class="auth-container">
+  <div class="auth">
+    <img class="img-user" src="../../../assets/images/user.png" alt="" />
+    <h1>{{ title | titlecase }}</h1>
+    <form [formGroup]="accessForm" (ngSubmit)="onSubmit()">
+      <mat-form-field *ngIf="register" appearance="fill" class="field">
+        <mat-label>Nombre</mat-label>
+        <input matInput #nombre formControlName="nombre" />
+
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("nombre")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="register" appearance="fill" class="field">
+        <mat-label>Apellido</mat-label>
+        <input matInput #apellido formControlName="apellido" />
+
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("apellido")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="register" appearance="fill" class="field">
+        <mat-label>DNI</mat-label>
+        <input matInput #dni formControlName="dni" />
+
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("dni")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("email")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="register" appearance="fill" class="field">
+        <mat-label>Telefono</mat-label>
+        <input matInput #telefono formControlName="telefono" />
+
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("telefono")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="fill" class="field">
+        <mat-label>Contraseña</mat-label>
+        <input type="password" #password matInput formControlName="password" />
+
+        <mat-error *ngIf="accessForm.invalid">{{
+          getErrorMessage("password")
+        }}</mat-error>
+      </mat-form-field>
+      <button
+        type="submit"
+        mat-raised-button
+        color="primary"
+        class="btn-auth"
+        [disabled]="accessForm.invalid"
+      >
+        Registrar
+      </button>
+    </form>
+  </div>
+</div>
