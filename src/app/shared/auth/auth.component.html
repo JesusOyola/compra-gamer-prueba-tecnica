@@ -50,6 +50,7 @@
           getErrorMessage("password")
         }}</mat-error>
       </mat-form-field>
+      <p  *ngIf="logIn" >No tienes una cuenta? <a href="/register">Registrate</a></p>
       <button
         type="submit"
         mat-raised-button
