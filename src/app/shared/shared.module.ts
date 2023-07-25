@@ -5,13 +5,40 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [AuthComponent],
-  imports: [CommonModule,ReactiveFormsModule, MatFormFieldModule, MatInputModule,MatButtonModule,MatSnackBarModule ],
-  exports: [AuthComponent, MatFormFieldModule, MatInputModule,MatButtonModule, MatSnackBarModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule,
+    MatMenuModule,
+  ],
+  exports: [
+    AuthComponent,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule,
+    MatMenuModule,
+  ],
 })
 export class SharedModule {}
