@@ -1,15 +1,39 @@
 <section>
-    <mat-toolbar color="primary" class="navbar-container">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
+  <mat-toolbar color="primary" class="navbar-container">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+      [matMenuTriggerFor]="menu"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button
+        mat-menu-item
+        *ngFor="let subCategories of subCategoriesList"
+        (click)="clickSearch(subCategories.id)"
+      >
+        {{ subCategories.nombre }}
       </button>
-      <h1>Compra Gamer</h1>
-      <div  class="amount-container"><span>3</span></div>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon class="shopping_cart">shopping_cart</mat-icon>
-        
-      </button>
-    </mat-toolbar>
-    
-</section>
+    </mat-menu>
 
+    <h1 routerLink="/dashboard">Compra Gamer</h1>
+    <article>
+      <button mat-button class="login-btn" routerLink="/login">
+        Iniciar Sesion
+      </button>
+      <div class="amount-container">
+        <span>{{ cartListProducts.length }}</span>
+      </div>
+      <button
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        routerLink="/cart"
+      >
+        <mat-icon class="shopping_cart">shopping_cart</mat-icon>
+      </button>
+    </article>
+  </mat-toolbar>
+</section>

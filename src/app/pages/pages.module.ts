@@ -5,19 +5,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { SharedModule } from '../shared/shared.module';
-
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from '../pipes/filter.pipe';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterPipe,
+   
   ],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    SharedModule
-  ]
+  imports: [CommonModule, PagesRoutingModule, SharedModule, FormsModule],
 })
-export class PagesModule { }
+export class PagesModule {}

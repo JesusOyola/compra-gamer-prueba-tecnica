@@ -13,7 +13,9 @@ export class ProductService {
     this.apiUrl ='https://static.compragamer.com/test/productos.json';
    }
 
-   getProducts():Observable<Products>{
-    return this.http.get<Products>(this.apiUrl)
+   getProducts():Observable<Products[]>{
+    return this.http.get<Products[]>(this.apiUrl)
    }
+
+   
 }

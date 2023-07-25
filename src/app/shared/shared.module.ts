@@ -11,6 +11,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [AuthComponent],
@@ -25,6 +26,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
+    MatMenuModule,
   ],
   exports: [
     AuthComponent,
@@ -36,6 +38,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatIconModule,
     MatCardModule,
     MatGridListModule,
+    MatMenuModule,
   ],
 })
 export class SharedModule {}

@@ -1,6 +1,6 @@
 import { ProductImages } from './products-images';
 
-export interface Products {
+export interface Products  {
   destacado: number;
   nombre: string;
   id_producto: number;
@@ -12,3 +12,9 @@ export interface Products {
   garantia: number;
   iva: number;
 }
+
+export interface ProductAmount extends Products{
+  cantidad?:number;
+}
+
+

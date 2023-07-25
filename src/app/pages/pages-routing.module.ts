@@ -5,6 +5,7 @@ import { RouterPathNames } from '../enum/router-path-names';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthComponent } from '../shared/auth/auth.component';
 
+
 const routes: Routes = [
   {
     path: RouterPathNames.dashboard,
